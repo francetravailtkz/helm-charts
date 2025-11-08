@@ -1,0 +1,11 @@
+apiVersion: v1
+entries:
+  mychart:
+    - apiVersion: v2
+      name: mychart
+      version: 0.1.0
+      description: Chart d'exemple pour dépôt GitHub
+      urls:
+        - https://<ton-utilisateur>.github.io/helm-charts/mychart-0.1.0.tgz
+      maintainers:
+        - name: TonNom
