@@ -1,11 +1,14 @@
 apiVersion: v1
 entries:
   mychart:
-    - apiVersion: v2
-      name: mychart
-      version: 0.1.0
-      description: Chart d'exemple pour dépôt GitHub
-      urls:
-        - https://francetravailtkz.github.io/helm-charts/mychart-0.1.0.tgz
-      maintainers:
-        - name: TonNom
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-11-08T10:20:07.365348463Z"
+    description: Une chart Helm minimale pour GitHub Pages
+    digest: eed19af8ccc237737cf74af8eb9c644d7012d9ed03284a33ab83c449dbff58e3
+    name: mychart
+    type: application
+    urls:
+    - https://francetravailtkz.github.io/helm-charts/mychart-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-11-08T10:20:07.365076512Z"
