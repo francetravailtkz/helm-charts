@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   mychart:
   - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2025-11-08T10:44:13.224732245Z"
+    description: Version 2 de la chart Helm minimale (avec nouvelles fonctionnalités)
+    digest: a0831e6c6535600901a10a767250c0b3849b99e36d8ab53415c7348f7eac73dd
+    name: mychart
+    type: application
+    urls:
+    - https://francetravailtkz.github.io/helm-charts/mychart-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-11-08T10:35:21.465163114Z"
+    created: "2025-11-08T10:44:13.224447095Z"
     description: Une chart Helm minimale pour GitHub Pages
     digest: eed19af8ccc237737cf74af8eb9c644d7012d9ed03284a33ab83c449dbff58e3
     name: mychart
@@ -13,7 +23,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-11-08T10:35:21.465495753Z"
+    created: "2025-11-08T10:44:13.224581856Z"
     description: Une chart Helm minimale pour GitHub Pages
     digest: eed19af8ccc237737cf74af8eb9c644d7012d9ed03284a33ab83c449dbff58e3
     name: mychart
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://francetravailtkz.github.io/helm-charts/mychart-0.2.0.tgz
     version: 0.1.0
-generated: "2025-11-08T10:35:21.464880559Z"
+generated: "2025-11-08T10:44:13.224179867Z"
