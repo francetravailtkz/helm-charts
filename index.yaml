@@ -14,7 +14,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2025-11-08T10:32:00.431540441Z"
-    description: Une chart Helm minimale pour GitHub Pages
+    description: Une chart Helm minimale pour GitHub Pages2
     digest: eed19af8ccc237737cf74af8eb9c644d7012d9ed03284a33ab83c449dbff58e3
     name: mychart
     type: application
