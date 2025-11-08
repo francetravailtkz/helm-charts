@@ -20,5 +20,5 @@ entries:
     type: application
     urls:
     - https://francetravailtkz.github.io/helm-charts/mychart-0.2.0.tgz
-    version: 0.1.0
+    version: 0.2.0
 generated: "2025-11-08T10:26:52.116911632Z"
