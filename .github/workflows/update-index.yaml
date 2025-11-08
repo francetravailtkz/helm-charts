@@ -1,4 +1,4 @@
-name: Update Helm index
+name: Update Helm index (clean sync)
 
 on:
   push:
@@ -6,13 +6,15 @@ on:
       - main
     paths:
       - '*.tgz'
+      - 'index.yaml'
       - '.github/workflows/update-index.yaml'
+      - '**.tgz'
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  rebuild:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,14 +26,24 @@ jobs:
         with:
           version: latest
 
+      # Supprime l'ancien index.yaml pour forcer une reconstruction propre
+      - name: Clean old index
+        run: |
+          if [ -f index.yaml ]; then
+            echo "Removing old index.yaml..."
+            rm index.yaml
+          fi
+
+      # Reconstruit l'index en fonction des charts .tgz présents
       - name: Rebuild Helm index
         run: |
           helm repo index . --url https://$GITHUB_ACTOR.github.io/${{ github.event.repository.name }}
 
+      # Commit et push du nouvel index
       - name: Commit and push updated index.yaml
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.yaml
-          git commit -m "Update Helm index [skip ci]" || echo "No changes to commit"
+          git commit -m "Rebuild Helm index [clean sync]" || echo "No changes to commit"
           git push
